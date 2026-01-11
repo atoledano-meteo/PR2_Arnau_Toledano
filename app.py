@@ -107,7 +107,7 @@ def generate_synthetic_wrf_data(domain_key, variable):
     """Generar dades sintètiques de sortida WRF per a fins de demostració."""
     # Crear array de temps (24 hores)
     start_time = datetime(2024, 1, 15, 0, 0)
-    times = pd.date_range(start_time, periods=24, freq='H')
+    times = pd.date_range(start_time, periods=24, freq='h')
     
     # Generar dades sintètiques de temperatura o vent
     if variable == "Temperature":
@@ -162,7 +162,7 @@ def generate_synthetic_observations(variable):
     """Generar dades sintètiques d'observacions per a fins de demostració."""
     # Crear array de temps (24 hores)
     start_time = datetime(2024, 1, 15, 0, 0)
-    times = pd.date_range(start_time, periods=24, freq='H')
+    times = pd.date_range(start_time, periods=24, freq='h')
     
     if variable == "Temperature":
         # "True" temperatura amb cicle diürn (sense bias)
@@ -185,7 +185,7 @@ def generate_synthetic_observations(variable):
     
     # Crear DataFrame
     df = pd.DataFrame({
-        'time': times,
+        'datetime': times,
         var_name: data
     })
     
@@ -198,7 +198,7 @@ def load_terrain_data(domain_key):
     Carregar dades de terreny des del fitxer geo_em utilitzant xarray.
     Si el fitxer no existeix, generar dades sintètiques per a la demostració.
     """
-    geo_file = DOMAINS[domain_key]["geo_em"]
+    geo_file = DOMAINS[domain_key]["data/geo_em"]
     
     if Path(geo_file).exists():
         ds = xr.open_dataset(geo_file)
@@ -216,7 +216,7 @@ def load_wrf_data(domain_key, variable):
     Carregar dades de sortida de WRF utilitzant xarray i extreure sèries temporals a l'estació Das.
     Si el fitxer no existeix, generar dades sintètiques.
     """
-    wrf_file = DOMAINS[domain_key]["wrfout"]
+    wrf_file = DOMAINS[domain_key]["data/wrfout"]
     
     if Path(wrf_file).exists():
         ds = xr.open_dataset(wrf_file)
@@ -243,7 +243,7 @@ def load_wrf_data(domain_key, variable):
         times = pd.to_datetime(ds['Times'].values)
         
         df = pd.DataFrame({
-            'time': times,
+            'datetime': times,
             var_name: var_data
         })
         
@@ -262,7 +262,7 @@ def load_observations(variable):
     obs_file = "data/meteocat_DP.csv"
     
     if Path(obs_file).exists():
-        df = pd.read_csv(obs_file, parse_dates=['time'])
+        df = pd.read_csv(obs_file, parse_dates=['datetime'])
         return df
     else:
         st.warning(f"Fitxer d'observacions no trobat: {obs_file}. S'utilitzen dades sintètiques per a la demostració.")
