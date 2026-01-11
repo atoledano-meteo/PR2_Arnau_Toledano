@@ -17,9 +17,7 @@ Les dades de sortida del WPS i el WRF (`wrfout*` i `geo_em*`) són excluídes al
 ## Observational Data (CSV)
 - `metecat_DP.csv` - Observacions de l'estació del SMC
 
-## Note
-
-Si aquestes dades no són presents, l'aplicació generarà dades sintètiques per demostrar el funcionament. Els fitxers de sortida wrfouts pesen molt i no entren al registre de Git.
+Si totes aquestes dades no són presents, l'aplicació generarà dades sintètiques per demostrar el funcionament. Els fitxers de sortida wrfouts pesen molt i no entren al registre de Git.
 
 ## Informació de l'estació de Das - Aeròdrom [DP]
 
