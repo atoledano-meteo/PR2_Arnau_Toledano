@@ -1,89 +1,79 @@
-# High Resolution Case Study: The Impact of Local Orography
+# Cas d'estudi: Impacte de l'orografia local
 
 Segona part de la pràctica de l'assignatura de Visualització de dades de la UOC.
 
-## Project Description
+## Descripció del projecte
 
-This Streamlit application visualizes WRF (Weather Research and Forecasting) model outputs compared to observational data for the Das station in Cerdanya, demonstrating how model resolution affects the representation of complex terrain and meteorological variables.
+Aquesta aplicació Streamlit visualitza els resultats del model WRF (Weather Research and Forecasting) en comparació amb les dades d'observació de l'estació Das a la Cerdanya, demostrant com la resolució del model afecta la representació de variables meteorològiques i de terreny complexes.
 
-## Features
+## Característiques
 
-- Interactive visualization of WRF model outputs at multiple resolutions (9km, 3km, 1km, 333m)
-- Comparison with observational data from Das station
-- Terrain height visualization showing orographic features
-- Time series validation plots with RMSE metrics
-- Educational storytelling elements explaining resolution impacts
+- Visualització interactiva de les sortides del model WRF a múltiples resolucions (9 km, 3 km, 1 km, 333 m)
+- Comparació amb dades d'observació de l'estació Das
+- Visualització de l'alçada del terreny que mostra les característiques orogràfiques
+- Gràfics de validació de sèries temporals amb mètriques RMSE
+- Elements narratius educatius que expliquen els impactes de la resolució
 
-## Setup Instructions
+## Configuració
 
-### Prerequisites
+### Requisits
 
-- Python 3.8 or higher
-- pip package manager
+- Python 3.8 o una versió més recent
+- Gestió de paquets `pip`
 
-### Installation
+### Instal·lació
 
-1. Clone the repository:
+1. Clonar el repositori:
+
    ```bash
    git clone https://github.com/atoledano-meteo/PR2_Arnau_Toledano.git
    cd PR2_Arnau_Toledano
    ```
 
-2. Create a virtual environment:
+2. Crear un entorn virtual:
+
    ```bash
    python -m venv venv
    ```
 
-3. Activate the virtual environment:
-   - On Windows:
+3. Activar-lo:
+
+   - Windows:
      ```bash
      venv\Scripts\activate
      ```
-   - On macOS/Linux:
+   - macOS/Linux:
      ```bash
      source venv/bin/activate
      ```
 
-4. Install required dependencies:
+4. Instal·lar les dependències:
+
    ```bash
    pip install -r requirements.txt
    ```
 
-### Running the Application
+### L'aplicació amb Streamlit
 
-1. Ensure your virtual environment is activated
-2. Run the Streamlit app:
+1. Assegura que l'entorn virtual està activat
+2. Fes còrrer la app Streamlit:
    ```bash
    streamlit run app.py
    ```
-3. Open your web browser and navigate to the URL shown in the terminal (typically `http://localhost:8501`)
+3. Obre un navegador amb l'enllaç que aparegui a la terminal (per exemple `http://localhost:8501`)
 
-## Data Structure
+## Estructura de les dades
 
-The application expects data in the following structure:
-```
-data/
-├── wrfout_d01_9km.nc       # WRF output at 9km resolution
-├── wrfout_d02_3km.nc       # WRF output at 3km resolution
-├── wrfout_d03_1km.nc       # WRF output at 1km resolution
-├── wrfout_d04_333m.nc      # WRF output at 333m resolution
-├── geo_em_d01_9km.nc       # Terrain data at 9km resolution
-├── geo_em_d02_3km.nc       # Terrain data at 3km resolution
-├── geo_em_d03_1km.nc       # Terrain data at 1km resolution
-├── geo_em_d04_333m.nc      # Terrain data at 333m resolution
-└── das_observations.csv    # Observational data from Das station
-```
+Llegiu el ["README"](/data/README.md) del directori `/data`. 
 
-**Note:** If actual data files are not available, the application will generate synthetic/mock data for demonstration purposes.
+## Estructura de l'aplicació
 
-## Application Structure
+- `app.py` - Aplicació Streamlit principal
+- `requirements.txt` - Dependències de Python
+- `data/` - Directori de dades 
+- `README.md` - Aquest fitxer
 
-- `app.py` - Main Streamlit application
-- `requirements.txt` - Python dependencies
-- `data/` - Data directory for NetCDF and CSV files
-- `README.md` - This file
-
-## Usage
+## Ús
 
 1. Use the **sidebar** to select:
    - Variable to visualize (Temperature or Wind)

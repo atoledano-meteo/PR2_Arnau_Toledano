@@ -1,9 +1,11 @@
 """
-High Resolution Case Study: The Impact of Local Orography
-Streamlit application for visualizing WRF model outputs vs observational data
+Cas d'estudi per la PR2 de Visualització de dades.
 
-Author: Arnau Toledano
-Course: UOC - Visualització de dades
+Impacte de l'orografia local: Aplicació Streamlit per visualitzar els 
+resultats del model WRF en comparació amb les dades d'observació
+
+Autor: Arnau Toledano
+Curs: PR2, UOC - Visualització de dades
 """
 
 import streamlit as st
