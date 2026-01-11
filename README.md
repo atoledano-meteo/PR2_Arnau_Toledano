@@ -33,18 +33,14 @@ Aquesta aplicació Streamlit visualitza els resultats del model WRF (Weather Res
 2. Crear un entorn virtual:
 
    ```bash
-   python -m venv venv
+   conda create -n pr2_env python=3.11 -y
    ```
 
 3. Activar-lo:
 
-   - Windows:
-     ```bash
-     venv\Scripts\activate
-     ```
    - macOS/Linux:
      ```bash
-     source venv/bin/activate
+     conda activate pr2_env
      ```
 
 4. Instal·lar les dependències:
@@ -89,25 +85,10 @@ Llegiu el ["README"](/data/README.md) del directori `/data`.
 
 4. Read the **info messages** that explain how resolution affects model accuracy
 
-## Das Station Information
+## Llicència
 
-- **Location:** Cerdanya valley, Catalonia
-- **Latitude:** 42.38°N
-- **Longitude:** 1.86°E
-- **Purpose:** Validation point for high-resolution WRF simulations
+["Llicència"](LICENSE) d'ús públic.
 
-## Technical Details
+## Autor
 
-- Built with Streamlit for interactive visualization
-- Uses xarray for efficient NetCDF data handling
-- Implements caching (@st.cache_data) for performance
-- Plotly for interactive time series plots
-- Matplotlib for geographic visualizations
-
-## License
-
-See LICENSE file for details.
-
-## Author
-
-Arnau Toledano - UOC Visualització de dades
+Arnau Toledano - UOC Visualització de dades 2026. 
