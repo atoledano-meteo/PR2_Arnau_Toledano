@@ -1,5 +1,7 @@
 # Data Directory
 
+WRF output files (`wrfout*` and `geo_em*`) are intentionally excluded from version control due to their size.
+
 This directory should contain the following data files for the WRF visualization application:
 
 ## WRF Output Files (NetCDF)
