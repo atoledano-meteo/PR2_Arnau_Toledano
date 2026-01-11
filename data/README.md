@@ -1,34 +1,29 @@
 # Data Directory
 
-WRF output files (`wrfout*` and `geo_em*`) are intentionally excluded from version control due to their size.
+Les dades de sortida del WPS i el WRF (`wrfout*` i `geo_em*`) són excluídes al `.gitignore` perquè pesen molt.
 
-This directory should contain the following data files for the WRF visualization application:
+## Dades de sortida del WRF (NetCDF)
+- `wrfout_d01_2024-03-01_06:00:00` - Dades a 9km de resolució espacial horitzontal del domini 1
+- `wrfout_d02_2024-03-01_06:00:00` - Dades a 3km de resolució espacial horitzontal del domini 2
+- `wrfout_d03_2024-03-01_06:00:00` - Dades a 1km de resolució espacial horitzontal del domini 3
+- `wrfout_d04_2024-03-01_06:00:00` - Dades a 333m de resolució espacial horitzontal del domini 4
 
-## WRF Output Files (NetCDF)
-- `wrfout_d01_2024-03-01_06:00:00` - WRF model output at 9km resolution
-- `wrfout_d02_2024-03-01_06:00:00` - WRF model output at 3km resolution
-- `wrfout_d03_2024-03-01_06:00:00` - WRF model output at 1km resolution
-- `wrfout_d04_2024-03-01_06:00:00` - WRF model output at 333m resolution
-
-## Terrain/Geographic Files (NetCDF)
-- `geo_em_d01_9km.nc` - Terrain elevation data at 9km resolution
-- `geo_em_d02_3km.nc` - Terrain elevation data at 3km resolution
-- `geo_em_d03_1km.nc` - Terrain elevation data at 1km resolution
-- `geo_em_d04_333m.nc` - Terrain elevation data at 333m resolution
+## Dades estàtiques del WPS (NetCDF)
+- `geo_em_d01.nc` - Dades a 9km de resolució espacial horitzontal del domini 1
+- `geo_em_d02.nc` - Dades a 3km de resolució espacial horitzontal del domini 2
+- `geo_em_d03.nc` - Dades a 1km de resolució espacial horitzontal del domini 3
+- `geo_em_d04.nc` - Dades a 333m de resolució espacial horitzontal del domini 4
 
 ## Observational Data (CSV)
-- `das_observations.csv` - Observational data from Das station in Cerdanya
-
-### Expected CSV Format
-The observational CSV file should have the following columns:
-- `time` - Timestamp (ISO format)
-- `T2` - 2-meter temperature (K)
-- `WSPD` - Wind speed (m/s)
+- `metecat_DP.csv` - Observacions de l'estació del SMC
 
 ## Note
-If these files are not present, the application will automatically generate synthetic data for demonstration purposes. This allows the application to run without requiring the actual large NetCDF files.
 
-## Das Station Information
-- **Latitude:** 42.38°N
-- **Longitude:** 1.86°E
-- **Location:** Cerdanya Valley, Catalonia
+Si aquestes dades no són presents, l'aplicació generarà dades sintètiques per demostrar el funcionament. Els fitxers de sortida wrfouts pesen molt i no entren al registre de Git.
+
+## Informació de l'estació de Das - Aeròdrom [DP]
+
+- **Latitud:** 42,38605
+- **Longitud:** 1,86640
+- **Altitud:** 1097 msnm
+- **Localització:** Cerdanya, Catalunya
