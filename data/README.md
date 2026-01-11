@@ -14,7 +14,7 @@ Les dades de sortida del WPS i el WRF (`wrfout*` i `geo_em*`) són excluídes al
 - `geo_em_d03.nc` - Dades a 1km de resolució espacial horitzontal del domini 3
 - `geo_em_d04.nc` - Dades a 333m de resolució espacial horitzontal del domini 4
 
-## Observational Data (CSV)
+## Dades observacionals (CSV)
 - `metecat_DP.csv` - Observacions de l'estació del SMC
 
 Si totes aquestes dades no són presents, l'aplicació generarà dades sintètiques per demostrar el funcionament. Els fitxers de sortida wrfouts pesen molt i no entren al registre de Git.
