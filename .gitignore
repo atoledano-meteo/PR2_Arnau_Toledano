@@ -63,3 +63,7 @@ wheels/
 # OS
 .DS_Store
 Thumbs.db
+
+# WRF output files
+wrfout*
+geo_em*
