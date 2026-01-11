@@ -1,4 +1,4 @@
-# Data Directory
+# Directori de dades
 
 Les dades de sortida del WPS i el WRF (`wrfout*` i `geo_em*`) són excluídes al `.gitignore` perquè pesen molt.
 
