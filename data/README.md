@@ -3,10 +3,10 @@
 This directory should contain the following data files for the WRF visualization application:
 
 ## WRF Output Files (NetCDF)
-- `wrfout_d01_9km.nc` - WRF model output at 9km resolution
-- `wrfout_d02_3km.nc` - WRF model output at 3km resolution
-- `wrfout_d03_1km.nc` - WRF model output at 1km resolution
-- `wrfout_d04_333m.nc` - WRF model output at 333m resolution
+- `wrfout_d01_2024-03-01_06:00:00` - WRF model output at 9km resolution
+- `wrfout_d02_2024-03-01_06:00:00` - WRF model output at 3km resolution
+- `wrfout_d03_2024-03-01_06:00:00` - WRF model output at 1km resolution
+- `wrfout_d04_2024-03-01_06:00:00` - WRF model output at 333m resolution
 
 ## Terrain/Geographic Files (NetCDF)
 - `geo_em_d01_9km.nc` - Terrain elevation data at 9km resolution
