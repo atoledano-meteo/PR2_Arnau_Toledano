@@ -1,0 +1,14 @@
+name: streamlit-app
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - numpy
+  - wrf-python
+  - netcdf4
+  - xarray
+  - pandas
+  - plotly
+  - scipy
+  - matplotlib
+  - streamlit
