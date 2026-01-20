@@ -69,20 +69,6 @@ Llegiu el ["README"](/data/README.md) del directori `/data`.
 - `data/` - Directori de dades 
 - `README.md` - Aquest fitxer
 
-## Ús
-
-1. Use the **sidebar** to select:
-   - Variable to visualize (Temperature or Wind)
-   - Domain/Resolution (9km, 3km, 1km, or 333m)
-
-2. View the **left column** for:
-   - Geographic context with terrain height map
-   - Das station location marked in red
-
-3. View the **right column** for:
-   - Time series comparison plot (Observations vs WRF)
-   - RMSE metric for model validation
-
 4. Read the **info messages** that explain how resolution affects model accuracy
 
 ## Llicència
